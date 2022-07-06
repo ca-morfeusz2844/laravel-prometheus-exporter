@@ -22,5 +22,5 @@ ci-local: ci-local-8.0 ci-local-8.1
 ci-local-%:
 	rm -rf composer.lock vendor/ .phpunit.cache/
 
-	PHP_VERSION=${*} $(COMPOSER) install
+	PHP_VERSION=${*} $(COMPOSER) install --no-cache
 	PHP_VERSION=${*} $(PHP) vendor/bin/phpunit
